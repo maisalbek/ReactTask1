@@ -1,10 +1,10 @@
 import "./App.css";
+import MyRoutes from "./MyRoutes";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is smth</h1>
-      <h1>ERBOL</h1>
+      <MyRoutes/>
     </div>
   );
 }
