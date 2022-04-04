@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 import axios from "axios";
+import { notify } from "../components/toastify/Toastify";
 
 export const productContext = createContext();
 
@@ -26,6 +27,7 @@ const ProductContextProvider = ({ children }) => {
   const addProduct = async (newProduct) => {
     try {
       let res = await axios.post(API, newProduct);
+      notify('success', `Продукт ${newProduct.title} был успешно добавлен!`)
     } catch (err) {
       console.log(err);
     }
