@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
+import { API } from "../helpers/consts";
 
-const API = "http://localhost:8000/posts";
+// const API = "http://localhost:8000/posts";
 
 export const todoContext = createContext();
 
